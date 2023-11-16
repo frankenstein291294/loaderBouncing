@@ -1,0 +1,49 @@
+.wapper-content .loader {
+    position:fixed;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background-color: white;
+    z-index: 5;
+}
+
+.wapper-content .loader .container-img {
+    width: 200px;
+}
+
+.wapper-content .loader .container-img img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    transition: .3s ease;
+    animation: bouncing 1s linear infinite;
+}
+
+.wapper-content .loader .text-bouncing {
+    display: flex;
+}
+
+.wapper-content .loader .text-bouncing .text {
+    position: relative;
+    font-size: 3rem;
+    font-weight: bold;
+    color:#1CE6D4;
+    margin:0px 5px;
+    animation:bouncing 1s infinite;
+    animation-delay: calc( 0.1s * var( --i ) );
+}
+
+@keyframes bouncing  {
+    0%, 40%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-30px);
+    }
+}
